@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytic Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="icons/logo.svg" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="logo"><img src="./Assets/Icons/logo.svg" alt="logo"></a>
+            <div class="general_navs_div">
+                <nav class="primary_nav">
+                    <a href="#" aria-labelledby="dashboard" aria-current="true" class="active_link"><img src="./Assets/Icons/dashboard.svg" alt="dashboard icon" /></a>
+                    <a href="#trends" aria-labelledby="trend"><img src="./Assets/Icons/trend_up.svg" alt="trend icon" /></a>
+                    <a href="#profile" aria-labelledby="user profile"><img src="./Assets/Icons/profile_2user.svg" alt="profile icon" /></a>
+                    <a href="#box_to_be_named" aria-labelledby=""><img src="./Assets/Icons/box.svg" alt="box icon" /></a>
+                    <a href="#to_be_named" aria-labelledby="discount"><img src="./Assets/Icons/discount_shape.svg" alt="discount icon" /></a>
+                    <a href="#info" aria-labelledby="info"><img src="./Assets/Icons/info_circle.svg" alt="info icon" /></a>
+                    <div class="theme_color">
+                        <button type="button" aria-labelledby="light theme" aria-current="true"><img src="./Assets/Icons/brightness_1.svg" alt="brightness icon" /></button>
+                        <button type="button" aria-labelledby="dark theme"><img src="Assets/Icons/moon_1.svg" alt="moon icon" /></button>
+                    </div>
+                </nav>
+
+                <!-- SECONDARY NAV SECTION -->
+
+
+                <nav class="secondary_nav">
+                    <a href="#" aria-labelledby="next navigation"><img src="./Assets/Icons/arrow_right.svg" alt="arrow right icon" /></a>
+                    <a href="#" aria-labelledby="settings"><img src="./Assets/Icons/setting_2.svg" alt="setting icon" /></a>
+                    <a href="#" aria-labelledby="logout"><img src="./Assets/Icons/logout.svg" alt="logout icon" /></a>
+                </nav>
+            </div>
+
+            <div class="burger" aria-label="burger menu">
+                <div class="burger_line"></div>
+                <div class="burger_line"></div>
+                <div class="burger_line"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN SECTION  -->
+
+
+    <main>
+        <section class="title_section">
+            <h1>Dashboard</h1>
+
+            <div class="container">
+                <div class="search_div white_bg">
+                    <img src="./Assets/Icons/search_icon.svg" alt="search icon" />
+                    <input type="search" name="search" id="search" placeholder="Search...">
+                </div>
+
+                <div class="date_div">
+                    <img src="./Assets/Icons/solar_calendar.svg" alt="calender icon">
+                    <p class="todays_date">January 27, 2024</p>
+                </div>
+
+                <img src="./Assets/Icons/solar_bell.svg" alt="bell icon" class="notification_icon">
+
+                <div class="user_div">
+                    <img src="./Assets/Pics/justine_b.jpeg" alt="user">
+                    <div class="user_name">
+                        <p>Justin Bergson</p>
+                        <p class="user_email">Justin@gmail.com</p>
+                    </div>
+                    <img src="./Assets/Icons/arrow_down2.svg" alt="arrow down icon" class="arrow_down">
+                </div>
+            </div>
+        </section>
+
+        <section class="contents_container dashboard" id="dashboard" aria-hidden="false">
+            <div class="bar_chart_div white_bg">
+                <div class="chart_title">
+                    <h2>Sales Trends...</h2>
+
+                    <div class="sort_chart">
+                        <p>Short by : </p>
+
+                        <select title="short_chart" name="short_chart" id="short_chart">
+                            <option value="weekly">Weekly</option>
+                            <option value="weekly" selected>Monthly</option>
+                            <option value="weekly">Yearly</option>
+                        </select>
+
+                        <img class="arrow_down" src="./Assets/Icons/arrow_down2.svg" alt="arrown down icon">
+                    </div>
+                </div>
+
+                <div class="chart_container">
+                    <canvas id="bar_chart"></canvas>
+                </div>
+            </div>
+
+            <div class="second_child">
+                <div class="total_order container first white_bg">
+                    <div class="child_1">
+                        <img class="icon" src="./Assets/Icons/box_tick.svg" alt="box icon">
+                        <img src="./Assets/Icons/chart_up.svg" alt="line chart">
+                    </div>
+
+                    <div class="total order">
+                        <h4>Total Order</h4>
+                        <p>350</p>
+                    </div>
+
+                    <div class="current_pct">
+                        <div class="percentage">
+                            <img class="chart_up" src="./Assets/Icons/chart_up_arrow.svg" alt="up chart arrow">
+                            <p>23,5%</p>
+                        </div>
+                        <p>vs. previous month</p>
+                    </div>
+                </div>
+
+                <div class="total_refund container second white_bg">
+                    <div class="child_1">
+                        <img class="icon" src="./Assets/Icons/3d_rotate.svg" alt="3d rotate icon">
+                        <img src="./Assets/Icons/chart_down.svg" alt="line chart">
+                    </div>
+
+                    <div class="total refund">
+                        <h4>Total Refund</h4>
+                        <p>270</p>
+                    </div>
+
+                    <div class="current_pct">
+                        <div class="percentage">
+                            <img class="chart_down" src="./Assets/Icons/chart_down_arrow.svg" alt="down chart arrow">
+                            <p>23,5%</p>
+                        </div>
+                        <p>vs. previous month</p>
+                    </div>
+                </div>
+
+                <div class="average_sales container third white_bg">
+                    <div class="child_1">
+                        <img class="icon" src="./Assets/Icons/shopping_cart.svg" alt="shopping cart icon">
+                        <img src="./Assets/Icons/chart_down.svg" alt="line chart">
+                    </div>
+
+                    <div class="total average_sales">
+                        <h4>Average Sales</h4>
+                        <p>1567</p>
+                    </div>
+
+                    <div class="current_pct">
+                        <div class="percentage">
+                            <img class="chart_down" src="./Assets/Icons/chart_down_arrow.svg" alt="down chart arrow">
+                            <p>23,5%</p>
+                        </div>
+                        <p>vs. previous month</p>
+                    </div>
+                </div>
+
+                <div class="total_income container fourth white_bg">
+                    <div class="child_1">
+                        <img class="icon" src="./Assets/Icons/coin.svg" alt="coin icon">
+                        <img src="./Assets/Icons/chart_up.svg" alt="line chart">
+                    </div>
+
+                    <div class="total income">
+                        <h4>Total Income</h4>
+                        <p>$350.000</p>
+                    </div>
+
+                    <div class="current_pct">
+                        <div class="percentage">
+                            <img class="chart_up" src="./Assets/Icons/chart_up_arrow.svg" alt="up chart arrow">
+                            <p>23,5%</p>
+                        </div>
+                        <p>vs. previous month</p>
+                    </div>
+                </div>
+            </div>
+
+            <table class="last_order_table white_bg">
+                <thead>
+                    <tr>
+                        <th>Last Orders</th>
+                        <th><a href="#">See All</a></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Invoice</th>
+                    </tr>
+
+                    <tr>
+                        <td class="last_order_name">
+                            <img src="./Assets/Pics/marcus_b.jpeg" alt="last order name">
+                            <p>Marcus Bergson</p>
+                        </td>
+
+                        <td>Nov 15, 2023</td>
+                        <td>$80,000</td>
+                        <td class="paid">Paid</td>
+                        <td class="view">
+                            <a href="#" download="name_of_file">
+                                <img src="./Assets/Icons/document_download.svg" alt="download icon">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="last_order_name">
+                            <img src="./Assets/Pics/jaydon_v.jpeg" alt="last order name">
+                            <p>Jaydon Vaccaro</p>
+                        </td>
+
+                        <td>Nov 15, 2023</td>
+                        <td>$150,000</td>
+                        <td class="refund">Refund</td>
+                        <td class="view">
+                            <a href="#" download="name_of_file">
+                                <img src="./Assets/Icons/document_download.svg" alt="download icon">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="last_order_name">
+                            <img src="./Assets/Pics/corey_s.jpeg" alt="last order name">
+                            <p>Corey Schleifer</p>
+                        </td>
+
+                        <td>Nov 14, 2023</td>
+                        <td>$87,000</td>
+                        <td class="paid">Paid</td>
+                        <td class="view">
+                            <a href="#" download="name_of_file">
+                                <img src="./Assets/Icons/document_download.svg" alt="download icon">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="last_order_name">
+                            <img src="./Assets/Pics/cooper_p.jpeg" alt="last order name">
+                            <p>Cooper Press</p>
+                        </td>
+
+                        <td>FEB 22, 2024</td>
+                        <td>$100,000</td>
+                        <td class="refund">Refund</td>
+                        <td class="view">
+                            <a href="#" download="name_of_file">
+                                <img src="./Assets/Icons/document_download.svg" alt="download icon">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="last_order_name">
+                            <img src="./Assets/Pics/phillip_l.jpeg" alt="last order name">
+                            <p>Phillip Lubin</p>
+                        </td>
+
+                        <td>Nov 13, 2023</td>
+                        <td>$78,000</td>
+                        <td class="paid">Paid</td>
+                        <td class="view">
+                            <a href="#" download="name_of_file">
+                                <img src="./Assets/Icons/document_download.svg" alt="download icon">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="top_platforms_div white_bg">
+                <div class="first_child">
+                    <h4>Top Platform</h4>
+                    <a href="#">See All</a>
+                </div>
+
+                <div class="platforms_container">
+                    <div class="platform">
+                        <label for="book_bazaar">Book Bazaar</label>
+                        <input type="range" name="book_bazaar" id="book_bazaar" value="50">
+                        <p>$2,500,000 <span>+15%</span></p>
+                    </div>
+                    <div class="platform">
+                        <label for="artisan_aisle">Artisan Aisle</label>
+                        <input type="range" name="artisan_aisle" id="artisan_aisle" value="40">
+                        <p>$1,800,000 <span>+10%</span></p>
+                    </div>
+                    <div class="platform">
+                        <label for="toy_troop">Toy Troop</label>
+                        <input type="range" name="toy_troop" id="toy_troop" value="25">
+                        <p>$1,200,000 <span>+8%</span></p>
+                    </div>
+                    <div class="platform">
+                        <label for="xstore">XStore</label>
+                        <input type="range" name="xstore" id="xstore" value="15">
+                        <p>$600,000 <span>+5%</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
